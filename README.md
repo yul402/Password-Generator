@@ -1,5 +1,7 @@
 # Project: Password Generator
-This repository showcases a web application that can be used to generate strong passwords for users based on their choices. Figure below shows the outlook of the application:
+This repository showcases a web application that can be used to generate strong passwords for users based on their choices. 
+
+Deployed application: password-generator-6n4ju2pp5-yul402.vercel.app
 
 ![Alt text](/Assets/PasswordGenerator_01.png?raw=true "Website layout")
 
