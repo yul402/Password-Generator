@@ -3,3 +3,5 @@ This repository showcases a web application that can generate strong passwords f
 
 
 ![Alt text](Password-Generator/Assets/PasswordGenerator_01.png?raw=true "Optional Title")
+![Alt text](/Assets/PasswordGenerator_01.png?raw=true "Optional Title")
+![Alt text](/Assets/PasswordGenerator_01.png?raw=true)
