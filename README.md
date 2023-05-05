@@ -5,7 +5,7 @@ This repository showcases a web application that can be used to generate strong 
 
 
 ## Ask for Password Specification
-Once user click on "Generate Password" button, a sequence of promp will be shown to ask for desired specification. 
+Once the user clicks on "Generate Password" button, a sequence of promp will be shown to ask for desired specification. 
 
 - Password Length: user should enter a numeric value between 8-128. The defualt length is 8 digits. 
 - Uppercase character type: check if user want to include uppercase letter within the generated password.
