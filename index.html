@@ -1,34 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+    <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Password Generator</title>
-    <link rel="stylesheet" href="./Assets/style.css" />
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Password Generator</h1>
-      </header>
-      <div class="card">
-        <div class="card-header">
-          <h2>Generate a Password</h2>
+    <meta name="Quiz" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./Assets/css/style.css" />
+    <title>Quiz</title>
+    </head>
+
+    <body>
+        <!--Title section contains "View Scores" and "Timer" count down for this quiz-->
+        <div class="Title">
+            <!-- Direct to "View Score" webpage after user clicking "View Scores"-->
+            <div class="view-scores" style="left:8vw">
+                <a href="./scores.html" style="color:rgb(185, 65, 105); font-size: 1.2em;">View Scores</a>
+            </div>
+            <!-- Timer section to show remaining time for this quiz-->
+            <div class="timer" style="left: 80vw">
+                <p id="timerVal" style="font-size: 1.3em;">Time Left:</p>
+            </div>
         </div>
-        <div class="card-body">
-          <textarea
-            readonly
-            id="password"
-            placeholder="Your Secure Password"
-            aria-label="Generated Password"
-          ></textarea>
+        <!-- Start-Quiz Section: guide user to start the quiz; question will be loaded after user clicking on "Start Quiz" button-->
+        <div class="start-quiz">
+            <h1>Coding Quiz Challenge</h1>
+            <br>
+            <p style= "font-size: 1.2em;">Try to answer the following javaScript-related questions from 'W3 schools' within the time limit. Keep in mind that incorrect answers will penalize your time by ten seconds! </p>
+            <button onclick=LoadQuestion(0) style= "font-size: 1.2em; margin:20px 0px">Start Quiz</button>
         </div>
-        <div class="card-footer">
-          <button id="generate" class="btn">Generate Password</button>
+
+        <!-- Question-Container section: show the question and four choices-->
+        <div class="question-container">
+            <h1 id="display-question"></h1>
+            <br>
+            <div id="option-container">
+                <span>
+                    <input type="radio" id="option-one" name="option" class="radio" value="optionA"/>
+                    <label for="option-one" class="option" id="option-one-label"></label>
+                </span>
+                <span>
+                    <input type="radio" id="option-two" name="option" class="radio" value="optionB" />
+                    <label for="option-two" class="option" id="option-two-label"></label>    
+                </span>
+
+                <span>
+                    <input type="radio" id="option-three" name="option" class="radio" value="optionC" />
+                    <label for="option-three" class="option" id="option-three-label"></label>    
+                </span>
+                <span>
+                    <input type="radio" id="option-four" name="option" class="radio" value="optionD" />
+                    <label for="option-four" class="option" id="option-four-label"></label>    
+                </span>
+            </div>
+            <!--Check the correctness for user's selection by clicking 'Continue' button; Will move to a new question 1s after the check-->>
+            <button onclick = checkAnswer()>Continue</button>
+            <p id="question-result" style="font-weight: bold;font-size: 2rem;"></p>
         </div>
-      </div>
-    </div>
-    <script src="./Assets/script.js"></script>
-  </body>
+
+        <!-- Submit-Container Section: Enter initials and submit score to 'view score' page -->
+        <div class="submit-container">
+            <h1>All done!</h1>
+            <p>Your final score is <span id="final-score"></span>.</p>
+            <p>Enter initials: <input type="text" id="initials"/></p>
+            <button id="submit" onclick=submitScore()>Submit</button>
+        </div>
+
+        <script src="./Assets/js/script.js"></script>    
+    </body>
 </html>

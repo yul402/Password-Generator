@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Cursor change for hover action */
+.view-scores:hover, button:hover{
+    cursor:pointer;
+}
+
+/* Postion is set to top of the webpage */
+.view-scores, .timer {
+    position: absolute;
+    top: 2vh;
+}
+
+
+/* Display sections with border */
+.start-quiz, .submit-container, .score-wrapper{
+    margin: 30vh auto 0 auto;
+    padding:25px;
+    max-width: 50vw;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+/* Put sections at the center of webpage */
+.question-container,.submit-container{
+    display:none;
+    margin: 30vh auto 0 auto;
+    padding:10px;
+    max-width: 50vw;
+}
+
+/* Set up question option display */
+.option-container{
+    width: 80%;
+    height: 12rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+.option-container span{
+    width: 45%;
+    height: 3rem;
+    border: 2px solid darkgray;
+    border-radius: 20px;
+    overflow: hidden;
+}
+span label{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    cursor: pointer;
+    transition: transform 0.3s;
+    font-weight: 600;
+    color: rgb(22, 22, 22);
+}
+span label:hover{
+    -ms-transform: scale(1.12);
+    -webkit-transform: scale(1.12);
+    transform: scale(1.12);
+    color: grey;
+}
+input[type="radio"] {
+    position: relative;
+    display: none;
+}
+input[type=radio]:checked ~ .option {
+    background: paleturquoise;
+}
+
+
